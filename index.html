@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Home Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baumans&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Roboto+Mono:ital,wght@0,200;0,300;0,400;1,200;1,400&display=swap" rel="stylesheet">
+</head>
+
+
+<body onload="draw()">
+    
+    <div class="hero-image">
+        <div class="hero-text">
+            <h1>I am Jasmine</h1>
+            <h4>...and also, a Graphic Designer</h4>
+        </div>
+    </div>
+    
+    <div id="navbar">
+        <a href="index.html" class="active">Home</a>
+        <a href="aboutme.html">About Me</a>
+        <a href="myportfolio.html">My Portfolio</a>
+        <a href="contact.html">Contact</a>
+     </div>
+    <!--removing name in nav bar to avoid visual clutter, but wi;; appear on following pages, without hero text-->    
+    <div class="quote-left">
+        <h2>"<br>The Mind is like an umbrella - it functions best when open. <br>&nbsp;"</h2>
+        <h3 class="quote-author"> - Walter Gropius (Bauhaus Founder)</h3>
+    </div>
+
+    <!--playing with typography treament for Quote-->    
+    <div class="container">
+
+        
+        <div class="stuff" id="intro">
+            <p>Hi! My name is<span style="color:#265DA6"><strong><br>JASMINE HERNANDEZ–</strong></span> welcome to my site. This is my final assignment for Mtech 1003.</p>
+           <p><em>Dizzy yet??</em><br> Click <a href=aboutme.html>here</a> for safety.</p> 
+        </div>
+<!--wk13 animation lab. lets make this bounce-->
+        <div class="stuff" id="animation-proj">
+            <canvas id="sketch" width="650" height="500"></canvas>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', main);
+
+                var sketch;
+                var context;
+                var rectangle = {'x':0, 'y':100, 'w':120, 'h':120};
+                var dx = 3;
+                var fps = 10;
+
+                function main() {
+                    sketch = document.getElementById('sketch');
+                    context = sketch.getContext("2d");
+                    setInterval(animate, fps);
+                    context.fillStyle = "#D93232";
+                }
+
+                function animate() {
+                    context.clearRect(0, 0, sketch.offsetWidth, sketch.offsetHeight);
+                    context.fillRect(rectangle.x, rectangle.y, 120, 120);
+
+                    rectangle.x = rectangle.x + dx;
+                    if (rectangle.x > sketch.offsetWidth - rectangle.w - dx) {
+                        dx = dx * -1;
+                        rectangle.x = offsetWidth;
+                    
+                    } else if (rectangle.x < 0 + dx) {
+                        dx = dx * -1;
+                        rectangle.x = 0;
+                    }
+                }
+            </script>  
+
+            <figcaption >Animation project / mtech 1003</figcaption>
+
+        </div>   
+    </div>  
+
+    <script src="navbar.v01.js"></script>
+</body>
+</html>
