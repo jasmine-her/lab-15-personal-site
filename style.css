@@ -141,35 +141,46 @@ figcaption {
     text-transform: capitalize;
     letter-spacing: 3px;
     margin-left: 100px;
+    padding-top: 30px;
 }
 
-.quote-right {
-    color: #F2B84B;
+
+.quote-left-opacity {
+    color: #f2b84b90;
     word-wrap: break-word;
     font-family: 'Roboto Mono', monospace;
     display: block;
     overflow: auto;
     width: 240px;
     font-weight: 300;
-    float: right;
-    font-size: 31px;
-    text-align: left;
+    float: left;
+    font-size: 28px;
+    text-align: center;
     text-transform: capitalize;
     letter-spacing: 3px;
+    margin-left: 100px;padding-top: 30px;
 }
 
+
 div.stuff {
- 
     display: block;
     word-wrap: break-word;
     overflow: auto;
    margin: auto;
 }
 
-div#animation-proj {
+div#animation-proj-big {
     background-color: #0D0D0D;
     width: 650px;
-    height: 450px;
+    height: 550px;
+    margin: auto;
+    padding: 10px;
+}
+
+div#animation-proj-small {
+    background-color: #F2B84B;
+    width: 1000px;
+    height: 1000px;
     margin: auto;
     padding: 10px;
 }
@@ -177,14 +188,20 @@ div#animation-proj {
 div#intro{
     word-wrap: break-word;
     overflow: auto;
-    width: 200px;
+    width: 220px;
 
     font-weight: lighter;
     float: right;
     font-size: 18px;
-    text-align: right;
-    padding-top: 100px;
+    text-align: center;
+    padding-top: 50px;
     color: dimgray;
+}
+    
+hr {
+    border: 10px solid#0d0d0d;
+    width: 100px;
+    text-align: center;
 }
 
 div#leading-paragraph {
@@ -193,35 +210,37 @@ div#leading-paragraph {
     margin-bottom: 50px;
     max-width: 1000px;
 }
+
+
 div#wrapper{
    background-color:#F2E6D8 ;
    margin-bottom:20px;
    padding: 20px;
 }
 
-p {
-    padding: 20px;
+#marketing-packages {
+    width: 500px;
+    height: auto;
 }
-/*img.box {
-    background-color: #260A03;
-    width: 300px;
-    padding: 20px;
-    margin: auto;
-}*/
+
+p {
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
 
 .gallery {
     margin: auto;
-    border: 1px solid #ccc;
-    float: left;
+    padding: 10px; 
 }
 
   .gallery img {
-    height: auto;
-    width: 400px;
+    height: 300px;
+    padding: 5px;
+    overflow: auto;
   }
 
-  .rows {
-      margin: auto;
+  .snippet {
+      width: 400px;
+      height: auto;
   }
-
-

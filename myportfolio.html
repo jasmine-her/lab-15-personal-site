@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Baumans&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Roboto+Mono:ital,wght@0,200;0,300;0,400;1,200;1,400&display=swap" rel="stylesheet">
-
+<style>
+    
+</style>
 
 </head>
 <body onload="draw()">
@@ -25,12 +27,19 @@
     <div id="navbar">
         <a href="index.html" >Home</a>
         <a href="aboutme.html">About Me</a>
-        <a href="myportfolio.html"class="active" >My Portfolio</a>
+        <a href="myportfolio.html"class="active" >Portfolio</a>
         <a href="contact.html">Contact</a>
         
         <div class="header">Jasmine Hernandez</div>
      </div>
-   
+
+     <!--Quote-->
+     <div class="quote-left-opacity">
+        <h2>"<br>The Mind is like an umbrella - it functions best when open. <br>&nbsp;"</h2>
+        <h3 class="quote-author"> - Walter Gropius (Bauhaus Founder)</h3>
+    </div>
+
+    <!--Container for content-->
     <div class="container">
         <div class="stuff" id="leading-paragraph">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Volutpat odio facilisis mauris sit amet massa vitae tortor condimentum. Enim praesent elementum facilisis leo vel fringilla est. Leo urna molestie at elementum eu facilisis sed odio.</p>
@@ -38,29 +47,40 @@
 <!--design element...floating rules-->
  
 
-<!--Gallery box1-->
-        <div class="gallery" id="wrapper">      
-            <h2>Custom Property (Marketing) Packages</h2>
-            <a target="_blank" href="http://via.placeholder.com/540x360" >
-            <img src="http://via.placeholder.com/540x360" alt="Cinque Terre" width="540" height="360">
-            </a>
-            <div class="desc">Add a description of the image here</div>
-        </div>
+<!--four by seven cirle canvas html proj / wk 13 to run in portfolio-->
+                <div class="stuff" id="animation-proj-small">
+     
+                    <canvas id="sketch" width="600" height="600"></canvas>
 
-<!--Gallery box2-->
-           
-        <div class="gallery" id="wrapper">  
-            <h2>Custom Property (Marketing) Packages2</h2>
-            <a target="_blank" href="http://via.placeholder.com/540x360" >
-                <img src="http://via.placeholder.com/540x360" alt="Cinque Terre" width="540" height="360">
-            </a>
-            <div class="desc">Add a description of the image here</div>
-        </div> 
-        <hr class="left-rule">   
-    </div>
+                    <script>
+                        function draw() {
+                            var sketch = document.getElementById('sketch');
+                            var context = sketch.getContext("2d");
+                
+                            context.fillStyle = "#fff";
+                            
+                            for (let r =1; r <= 7; r++) {
+                                // outer loop (vertical; columns)
+                                for (let i = 1; i <=4; i++) {
+                                    //inner loop (rows; horizontal)
+                                context.beginPath();
+                                context.arc((i * 50), (r *50), 20, 0, 2 * Math.PI, true);
+                                // context.arc(x, y, radius, start angle, end angle, clockwise);
+                                context.closePath();
+                                context.fill();
+                                }
+                            }
+                        }
+                    </script>
+               </div>
+
+        <!--four by seven cirle canvas html proj / wk 13 lab code snippet.-->
+                    
+                        <div class="snippet"><img src="images/snippet of code wk 13 four by seven circles 600px.jpg" ></div>
+                    </div>
+                </div>
     
     <!--design element...floating rules-->
-</div>
 
     <script src="navbar.v01.js"></script>
 </body>
