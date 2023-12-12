@@ -179,10 +179,11 @@ div#animation-proj-big {
 
 div#animation-proj-small {
     background-color: #F2B84B;
-    width: 1000px;
-    height: 1000px;
+    width: 260px;
+    height: auto;
     margin: auto;
     padding: 10px;
+    float: left;
 }
 
 div#intro{
@@ -241,6 +242,8 @@ p {
   }
 
   .snippet {
-      width: 400px;
       height: auto;
+      float: right;
+      max-width: 700px;
+      overflow: hidden;
   }
