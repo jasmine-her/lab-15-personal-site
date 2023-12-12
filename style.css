@@ -247,3 +247,17 @@ p {
       max-width: 700px;
       overflow: hidden;
   }
+
+  .icons {
+     height: auto;
+     float: left;
+  }
+
+  .contact {
+      float: left;
+      padding: 10px;
+  }
+
+   .contact a{
+    text-decoration: none;
+  }
